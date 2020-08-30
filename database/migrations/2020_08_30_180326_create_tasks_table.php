@@ -18,7 +18,7 @@ class CreateTasksTable extends Migration
             $table->uuid('teamID')->onDelete('set null');
             $table->uuid('projectID')->nullable();
             $table->string('title')->nullable(false);
-            $table->string('desc')->nullable();
+            $table->text('desc')->nullable();
             $table->uuid('assigneeID')->nullable();
             $table->string('status')->default('todo');
             $table->foreign('teamID')->references('id')->on('teams');
