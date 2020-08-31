@@ -13,6 +13,19 @@ I built this app to learn about Laravel (esp. implementing RESTful APIs).
 5. cd into this repo `cd basic_task_manager` and run `php artisan serve`
 6. See the *API Endpoints* section at the end for reference.
 ---
+#### For running using docker
+Run the following commands-
+1. `git clone https://github.com/TipsByPullak/basic_task_manager`
+2. `git checkout -b add_docker origin/add_docker`
+3. `cp .env.example .env`  
+Now, set up the relevant variables in .env file. Make sure that `DB_HOST` is set as `db`. You may need to customise `Dockerfile` and `docker-compose.yaml` to suit your needs.  
+Now, run the following commands-
+4. `docker-compose build`
+5. `docker-compose up -d`  
+This will set up all relevant containers in your docker.
+The API is now accessible at [http://0.0.0.0:8009](http://0.0.0.0:8009). (The default port is 8009 and hostIP is 0.0.0.0, you might have changed it).  
+You can administrate the database using phpMyAdmin at [http://0.0.0.0:8090](http://0.0.0.0:8090)
+---
 ### API Endpoints
 
 ```
