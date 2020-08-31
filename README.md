@@ -1,8 +1,8 @@
-# Basic Task Manager
+# Basic Task Manager  
 
-### Description
-I built this app to learn about Laravel (esp. implementing RESTful APIs).
-**WARNING**- The program is NOT thoroughly tested.
+### Description  
+I built this app to learn about Laravel (esp. implementing RESTful APIs).  
+**Tech Stack-** Laravel, MySQL
 ---
 ### Instructions
 #### For running entirely on localhost
