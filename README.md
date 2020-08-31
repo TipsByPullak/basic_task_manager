@@ -2,7 +2,7 @@
 
 ### Description  
 I built this app to learn about Laravel (esp. implementing RESTful APIs).  
-**Tech Stack-** Laravel, MySQL
+**Tech Stack-** Laravel, MySQL  
 ---
 ### Instructions
 #### For running entirely on localhost
