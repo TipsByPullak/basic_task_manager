@@ -151,4 +151,4 @@ response:
 },
 ]
 List of all tasks for a member in the team in todo status
-```<script src="https://gist.github.com/TipsByPullak/2e15bd2e9184eac14f53543d1af19e4c.js"> </script>
+```
