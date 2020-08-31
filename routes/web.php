@@ -13,6 +13,25 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+//Welcome page landing
 Route::get('/', function () {
     return view('welcome');
 });
+
+//Routes for TeamController
+Route::get('/teams/{team}', 'TeamController@fetch');
+Route::post('/teams', 'TeamController@createTeam');
+
+//Routes for MemberController
+Route::get('/teams/{team_id}/members/{member_id}', 'MemberController@fetch');
+Route::post('/teams/{team_id}/member', 'MemberController@create');
+Route::delete('teams/{team_id}/members/{member}', 'MemberController@remove');
+
+//Routes for TaskController
+Route::get('/teams/{team}/tasks/{task_id}', 'TaskController@fetchTask');
+Route::get('/teams/{id}/tasks', 'TaskController@fetchAllTasks');
+Route::get('/teams/{team_id}/members/{member_id}/tasks', 'TaskController@fetchMemberTask');
+Route::post('/teams/{team_id}/tasks', 'TaskController@createTask');
+Route::patch('teams/{team_id}/tasks/{task}', 'TaskController@patchTask');
+

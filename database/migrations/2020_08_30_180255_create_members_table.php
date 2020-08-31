@@ -16,7 +16,7 @@ class CreateMembersTable extends Migration
         Schema::create('members', function (Blueprint $table) {
             $table->uuid('id')->primary();
             $table->string('name');
-            $table->text('email');
+            $table->string('email')->unique();
             $table->uuid('teamID')->onDelete('set null');
             $table->foreign('teamID')->references('id')->on('teams');
         });

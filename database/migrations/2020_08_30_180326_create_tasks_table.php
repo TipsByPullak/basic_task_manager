@@ -16,7 +16,7 @@ class CreateTasksTable extends Migration
         Schema::create('tasks', function (Blueprint $table) {
             $table->uuid('id')->primary();
             $table->uuid('teamID')->onDelete('set null');
-            $table->uuid('projectID')->nullable();
+            // $table->uuid('projectID')->nullable();
             $table->string('title')->nullable(false);
             $table->text('desc')->nullable();
             $table->uuid('assigneeID')->nullable();
