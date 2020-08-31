@@ -1,0 +1,27 @@
+version: '3.8'
+services:
+  app:
+    build: .
+    ports:
+      - "8009:8000"
+    volumes:
+      - .:/task_manager
+    env_file: .env
+    working_dir: /task_manager
+    command: bash -c 'composer install && php artisan migrate && php artisan serve --host 0.0.0.0'
+    depends_on:
+      - db
+    links:
+      - db
+  db:
+    image: "mysql:latest"
+    environment:
+      - MYSQL_ROOT_PASSWORD=
+      - MYSQL_DATABASE=task_manager
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=
+      - MYSQL_ALLOW_EMPTY_PASSWORD='yes'
+    volumes:
+      - ./data/:/user/local/var/mysql
+    ports:
+      - "3306:3306"
