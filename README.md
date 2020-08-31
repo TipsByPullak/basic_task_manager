@@ -14,4 +14,4 @@ I built this app to learn about Laravel (esp. implementing RESTful APIs).
 6. See the *API Endpoints* section at the end for reference.
 ---
 ### API Endpoints
-<script src="https://gist.github.com/TipsByPullak/2e15bd2e9184eac14f53543d1af19e4c.js"></script>
+<script src="https://gist.github.com/TipsByPullak/2e15bd2e9184eac14f53543d1af19e4c.js"> </script>
