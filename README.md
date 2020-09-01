@@ -28,7 +28,7 @@ You can administrate the database using phpMyAdmin at [http://0.0.0.0:8090](http
 ---
 ### API Endpoints
 
-```
+```json
 POST /teams
 request:
 
@@ -46,7 +46,7 @@ id should be uuid,
 name should be string
 ```
 
-```
+```json
 GET /teams/:id
 response:
 
@@ -56,7 +56,7 @@ response:
 }
 ```
 
-```
+```json
 POST /teams/:id/member
 request:
 {
@@ -73,7 +73,7 @@ In case email is already associated with someone in the team, throw an error mes
 "Email already associated with a team member"
 ```
 
-```
+```json
 DELETE /teams/:id/members/:id2
 
 response:
@@ -82,7 +82,7 @@ In case there are tasks assigned to the member, show a message saying:
 "Member cannot be deleted, please reassign all tasks from this member to someone else before trying again"
 ```
 
-```
+```json
 POST /teams/:id/tasks
 request:
 {
@@ -103,7 +103,7 @@ assignee_id should belong to the same team as the task.  Else raise an error
 Status can be todo or done
 ```
 
-```
+```json
 GET /teams/:id/tasks/:id2
 response:
 {
@@ -115,7 +115,7 @@ response:
 }
 ```
 
-```
+```json
 PATCH /teams/:id/tasks/:id2
 request:
 {
@@ -136,7 +136,7 @@ assignee_id should belong to the same team as the task.  Else raise an error
 Status can be todo or done
 ```
 
-```
+```json
 GET /teams/:id/tasks/
 response:
 [
@@ -151,7 +151,7 @@ response:
 List of all tasks for a team in todo status
 ```
 
-```
+```json
 GET /teams/:id/members/:id2/tasks/
 response:
 [
